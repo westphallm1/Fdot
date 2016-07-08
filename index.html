@@ -5,12 +5,19 @@ textarea {
   border:1px solid #999999;
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
 }
+pre {
+  border:1px solid #999999;
+  font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+}
 </style>
 </head>
 <h2>The F. Interpreter</h2>
 <p>
   <table>
     <td>
+      <p>
+        Enter source code here:
+      </p>
       <textarea  style="resize:none" id="text" rows="30" cols="50"></textarea>
     </td>
     <td>
@@ -43,11 +50,18 @@ Cmd Reference:
   </table>
 </p>
 <p>
-  <textarea id="cout" rows="4" cols="50"></textarea>
+  Enter text here:
 </p>
 <p>
   <input type="text" id="cmdline" size="50">
 </p>
+<p>
+  Output is logged here:
+</p>
+<p>
+  <textarea id="cout" rows="4" cols="50"></textarea>
+</p>
+
 <p>
   <input type="submit" id="run_button" value="Run">
 </p>
