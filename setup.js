@@ -46,7 +46,7 @@ Count down from user input
     .    .          prinft(%s, 1)(newline)
 .       .           decrement 0
 . . .            }
-Enter a number:
+Press Run, then enter a number:
 `;
 
 var source3 = 
