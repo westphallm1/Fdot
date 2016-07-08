@@ -1,6 +1,6 @@
 /* globals */
 var CMDSTR_LEN = 5;
-var EOF = 'eof';
+var EOF = 'eof'; 
 var REGISTERS;
 var STACK;
 var WAITING;
@@ -81,11 +81,11 @@ var pop_f = function(regs){
             return;
         }
         var popped_val = STACK.pop();
-        if(popped_val == 'eof'){
+        if(popped_val == EOF){
             REGISTERS[1] = 0;
             return;
         }
-        REGISTERS[regs[i]] = STACK.pop();
+        REGISTERS[regs[i]] = popped_val;
     }
     //successfully popped into all requested registers
     REGISTERS[1] = 1;
