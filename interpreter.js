@@ -249,7 +249,7 @@ var write_to_cout = function(str){
 /*global $*/
 $(document).ready(function(){
     $("#run_button").click(function(){
-        REGISTERS = [0,0,0,0,0,0,0,0,0,0,0];
+        REGISTERS = [0,0,0, 0,0,0,0,2,4,8,16];
         STACK = [];
         WAITING = false;
         LINE_NUM = 0;
