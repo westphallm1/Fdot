@@ -191,10 +191,17 @@ var end_f = function(regs){
     return line - 1;
 };
 
+//More math that will eventually be moved up
 //23
 var eq_f = function(regs){
-    
-}
+    REGISTERS[0] = REGISTERS[regs[0]] == REGISTERS[regs[1]];
+};
+var lt_f = function(regs){
+    REGISTERS[0] = REGISTERS[regs[0]] < REGISTERS[regs[1]];
+};
+var gt_f = function(regs){
+    REGISTERS[0] = REGISTERS[regs[0]] > REGISTERS[regs[1]];
+};
 }
 
 var parseStr = function(inStr){
@@ -254,7 +261,8 @@ $(document).ready(function(){
         WAITING = false;
         LINE_NUM = 0;
         $("#cout").html("Running..."+"\n");
-        lines = $("#text").html().split(/\n/g);
+        lines = $("#text").val().split(/\n/g);
+        alert(lines);
         main();
     });
     $("#cmdline").keypress(function(key) {
