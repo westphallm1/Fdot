@@ -262,7 +262,6 @@ $(document).ready(function(){
         LINE_NUM = 0;
         $("#cout").html("Running..."+"\n");
         lines = $("#text").val().split(/\n/g);
-        alert(lines);
         main();
     });
     $("#cmdline").keypress(function(key) {

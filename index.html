@@ -1,9 +1,10 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
 <head>
-<title>Fdot</title>
+<title>F&bull;</title>
 <style media="screen" type="text/css">
 body {
-    font-size: 100%;
+  font-size: 100%;
+  font-family:monospace;
 }
 textarea {
   border:1px solid #999999;
@@ -15,21 +16,28 @@ pre {
   font-family:monospace;
   font-size: 1em;
 }
+input[type=text]{
+        font-family:monospace;
+}
+input[type=submit]{
+        font-family:monospace;
+        font-size: 2em;
+}
 </style>
 </head>
+<body>
 <a href="https://github.com/westphallm1/Fdot"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
-<h2>The F. Interpreter</h2>
-<p>
+<h2>The F&bull; Interpreter</h2>
   <table>
     <td>
       <p>
         Enter source code here:
       </p>
-      <textarea  style="resize:none" id="text" rows="30" cols="50"></textarea>
+      <textarea  style="resize:none" id="text" rows="32" cols="50"></textarea>
     </td>
     <td>
-      <pre>
-Cmd Reference:
+      <p>Command Reference:</p>
+      <textarea readonly style="resize:none" rows = "32" cols="16">
 0 |     |inc
 1 |.    |dec
 2 | .   |add
@@ -52,12 +60,20 @@ Cmd Reference:
 19|..  .|frInt
 20|  . .|while
 21|. . .|end
-      </pre>
+22| .. .|Unfilled
+23|... .|   |
+24|   ..|   V
+25|.  ..|
+26| . ..|
+27|.. ..|
+28|  ...|
+29|. ...|
+30| ....|
+31|.....|</textarea>
     </td>
-  </table>
-</p>
-<p>
-  Enter text here:
+    <td valign="top">  
+<p id="console">
+  Enter input here:
 </p>
 <p>
   <input type="text" id="cmdline" size="50">
@@ -66,11 +82,21 @@ Cmd Reference:
   Output is logged here:
 </p>
 <p>
-  <textarea readonly id="cout" rows="4" cols="50"></textarea>
+  <textarea readonly id="cout" style="resize:vertical" rows="4" cols="50"></textarea>
 </p>
 
 <p>
-  <input type="submit" id="run_button" value="Run">
-</p>
+  <table>
+      <td>
+          <input type="submit" id="run_button" value="Run Source Code">
+      </td>
+      <td>
+          <input type="submit" id="exmpl_button" value="Load Example">
+      </tr>
+  </table>
+  </p>
+  </td>
+</table>
 <script src="setup.js"></script>
+</body>
 <script src="interpreter.js"></script>
